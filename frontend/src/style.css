@@ -1,0 +1,404 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --bg: #f4f6f8;
+  --card-bg: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --danger: #dc2626;
+  --success: #16a34a;
+  --radius: 8px;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+.btn-primary:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+input, select, textarea {
+  padding: 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: var(--radius);
+  width: 100%;
+  margin-bottom: 0.8rem;
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+.error-text {
+  color: var(--danger);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.success-text {
+  color: var(--success);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  margin: 1.5rem 0 1rem;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 4rem auto;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.auth-container h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.auth-switch a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--card-bg);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  margin-bottom: 1.5rem;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.navbar-links a:hover {
+  color: var(--primary);
+}
+
+.navbar-user {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.notification-bell {
+  position: relative;
+}
+
+.bell-icon {
+  background: none;
+  font-size: 1.3rem;
+  padding: 0.3rem;
+}
+
+.notification-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--danger);
+  color: white;
+  font-size: 0.65rem;
+  border-radius: 50%;
+  padding: 2px 5px;
+}
+
+.notification-dropdown {
+  position: absolute;
+  right: 0;
+  top: 2.5rem;
+  width: 280px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  z-index: 10;
+}
+
+.notification-section {
+  margin-bottom: 0.8rem;
+}
+
+.notification-section h4 {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.notification-item {
+  padding: 0.5rem;
+  border-radius: 6px;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.notification-item.missed {
+  background: #fee2e2;
+}
+
+.notification-item.upcoming {
+  background: #dcfce7;
+}
+
+.notification-empty {
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.notification-view-all {
+  width: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.85rem;
+}
+
+.notification-full-section {
+  margin-bottom: 2rem;
+}
+
+.notification-full-section h3 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.lesson-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.lesson-card h3 {
+  margin-bottom: 0.4rem;
+}
+
+.lesson-meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.lesson-message {
+  background: #dcfce7;
+  color: var(--success);
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.badge-missed {
+  background: #fee2e2;
+  color: var(--danger);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.badge-upcoming {
+  background: #dcfce7;
+  color: var(--success);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-alert {
+  padding: 0.8rem 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.dashboard-alert.missed {
+  background: #fee2e2;
+  color: var(--danger);
+}
+
+.dashboard-alert.upcoming {
+  background: #dcfce7;
+  color: var(--success);
+}
+
+.dashboard-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.summary-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.summary-card h3 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 0.3rem;
+}
+
+.dashboard-actions {
+  margin-top: 1rem;
+}
+
+.form-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  max-width: 500px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.form-card h2 {
+  margin-bottom: 1rem;
+}
+
+.profile-field {
+  margin-bottom: 1rem;
+}
+
+.profile-field label {
+  margin-bottom: 0.2rem;
+}
+
+.profile-field p {
+  font-size: 0.95rem;
+}
+
+.registrations-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.registrations-table th,
+.registrations-table td {
+  text-align: left;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.registrations-table th {
+  background: var(--bg);
+  color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .auth-container {
+    margin: 1.5rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .lesson-card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  button {
+    width: 100%;
+  }
+}
